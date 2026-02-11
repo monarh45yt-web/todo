@@ -11,8 +11,12 @@
 <body>
 
     <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Напишите сюда новую задачу">
-        <button class="add-button">ДОБАВИТЬ</button>
+        <form class="form" action="{% add 'add-todo' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" width="90%" class="search-input" placeholder="Напишите сюда новую задачу" name="todo_text">
+            <button class="add-button">ДОБАВИТЬ</button>
+            
+        </form>
     </div>
 
     {% for todo in todo_list %}
