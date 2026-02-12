@@ -79,6 +79,8 @@ body {
     background-color: #d1f2d6; /* Зеленый */
 }
 
+
+
 .card-yellow {
     background-color: #fff59d; /* Желтый */
 }
@@ -86,6 +88,7 @@ body {
 .card-gray {
     background-color: #e0e0e0; /* Серый */
     color: #777;
+    text-decoration: line-through;
 }
 
 /* ЭЛЕМЕНТЫ ВНУТРИ КАРТОЧКИ */
@@ -111,15 +114,30 @@ body {
     margin-bottom: 4px;
 }
 
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.far .fa-star .star-active a {
+    color: inherit;
+}
+
+.fas .fa-trash-alt a {
+    color: inherit;
+}
+
+.far .fa-star a{
+    color: inherit;
+}
+
 .date {
     font-size: 12px;
     opacity: 0.7;
 }
 
 /* Если карточка серая - зачеркиваем текст */
-.card-gray .title {
-    text-decoration: line-through;
-}
+
 
 /* Иконки справа */
 .icons-area {
